@@ -19,6 +19,8 @@ public class MessageController {
         add(new HashMap<String, String>(){{put("id", "1"); put("text", "test1");}});
         add(new HashMap<String, String>(){{put("id", "2"); put("text", "test2");}});
         add(new HashMap<String, String>(){{put("id", "3"); put("text", "test3");}});
+        add(new HashMap<String, String>(){{put("id", "4"); put("text", "test4");}});
+        add(new HashMap<String, String>(){{put("id", "5"); put("text", "test5");}});
     }};
 
 
