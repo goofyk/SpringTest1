@@ -13,14 +13,13 @@ import java.util.Map;
 @RequestMapping("message")
 public class MessageController {
 
-    private static int counter = 4;
+    private static int counter = 5;
 
     private List<Map<String, String>> messages = new ArrayList<Map<String, String>>(){{
         add(new HashMap<String, String>(){{put("id", "1"); put("text", "test1");}});
         add(new HashMap<String, String>(){{put("id", "2"); put("text", "test2");}});
         add(new HashMap<String, String>(){{put("id", "3"); put("text", "test3");}});
         add(new HashMap<String, String>(){{put("id", "4"); put("text", "test4");}});
-        add(new HashMap<String, String>(){{put("id", "5"); put("text", "test5");}});
     }};
 
 
@@ -44,7 +43,7 @@ public class MessageController {
     @PostMapping
     public Map<String, String> insert(@RequestBody Map<String, String> message){
         message.put("id", String.valueOf(counter++));
-        message.put("text", "Test" + counter);
+        message.put("text", message.get("text"));
         messages.add(message);
         return  message;
     }
